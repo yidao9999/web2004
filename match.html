@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //网页提示框输入信息
+        var msg=prompt("请输入信息")
+        //寻找敏感词
+        var arr=msg.match(/([我卧]|wo)\s*([槽草]|cao)/);
+        //返回的是数组arr[0]内容,arr[index]位置，如果找不到返回null
+        //判定是否找到敏感词
+        if(arr!=null){
+            //如果找到输出信息
+            document.write(`<h1 style="color:red;">管理员：在${arr.index}发现敏感词${arr[0]}，禁止发送</h1>`)
+        }else{
+            //如果找不到输出信息
+            document.write(`<h1 styel="color:green;">发送成功</h1>`)
+        }
+    </script>
+</body>
+</html>

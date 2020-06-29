@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //网页信息输入框
+        var msg=prompt("请输入信息")
+        //查询敏感词
+        var i=msg.search(/([我卧]|wo)\s*([槽草]|cao)/);
+        //判定是否寻找到敏感词
+        if(i!=-1){
+            //如果找到输出信息
+            document.write(`<h1 style="color:red;">管理员：发信敏感词，禁止发送</h1>`)
+        }else{
+            //如果没找到敏感词输出信息
+            document.write(`<h1 style="color:green;">发送成功</h1>`)
+        }
+    </script>
+</body>
+</html>

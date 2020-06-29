@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var email="roubaozi@qq.com";
+        //把邮箱切割成用户名和域名两部分
+        var arr=email.split("@");
+        console.log(arr);
+
+        var str="you can you up";
+        //把字符串切割成单个单词
+        var arr=str.split(/\s+/);
+        console.log(arr);
+
+        //翻转字符串
+        var str="hellowword";
+        //字符串没有翻转，需要先切割成数组
+        var arr=str.split("");
+        console.log(arr);
+        //然后在把数组翻转
+        var arr=arr.reverse();
+        console.log(arr);
+        //再将翻转后的数组转为字符串
+        var str=arr.join("");
+        console.log(str);
+    </script>
+</body>
+</html>

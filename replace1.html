@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //鄙视题: 将字符串中每个单词首字母转为大写
+        var str="you can you up";
+        //查找到每个单词的首个字母,然后用回调函数把找到的首个字母通过形参传给回调函数来转为大写字母
+        var str=str.replace(/\b[a-z]/g,function(str1){
+            console.log(`调用一次函数str1=${str1},返回的值${str1.toUpperCase()}`)
+            return str1.toUpperCase();
+        });
+        console.log(str);
+    </script>
+</body>
+</html>
