@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //用户密码输入提示框
+        // var pwd=prompt("请输入密码");
+        // //定义正则表达式 用户输入6位数密码
+        // var reg=/^\d{6}$/;
+        // //用正则检验密码是否格式正确
+        // var bool=reg.test(pwd);
+        // //判定是否通过
+        // if(bool==true){
+        //     document.write(`<h1 style="color:green">格式正确</h1>`);
+        // }else{
+        //     document.write(`<h1 style="color:red">格式错误</h1>`);
+        // }
+        //网页提示框 输入密码
+        var pwd=prompt("请输入密码");
+        //用正则表达式定义6位数密码
+        var reg=/^\d{6}$/;
+        //用你正则检验密码是否格式正确
+        var bool=reg.test(pwd);
+        //判定正确与否 如果正确或者错误 各输出什么信息
+        if(bool==true){
+            document.write(`<h1 style="color:green">密码正确</h1>`);
+        }else{
+            document.write(`<h1 style="color:red">密码格式错误</h1>`);
+        }
+    </script>
+</body>
+</html>

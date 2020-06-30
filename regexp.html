@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //服务器传来的数组
+        var arr=["明月","青天","菠萝"];
+        //将数组用|来拼接成字符串
+        var str=arr.join("|");
+        console.log(str);
+        //网页提示框信息输入
+        var msg=prompt("请输入信息");
+        //创建正则表达式对象
+        var reg=new RegExp(str);
+        //搜索敏感词
+        var str=msg.search(reg);
+        //判断是否找到敏感词
+        if(str=-1){
+            document.write(`<h1 style="color:red;">发现敏感词,禁止发送</h1>`);
+        }else{
+            document.write(`<h1 style="color:green;">发送成功</h1>`);
+        }
+    </script>
+</body>
+</html>
